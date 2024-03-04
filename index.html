@@ -10,26 +10,44 @@
 </head>
 
 <body>
-    
     <div class="container">
-    
+        <div class="form">
         <form id="calc" onsubmit="calculateTemp(); return false">
             <label for="temp"> temperature  convertor</label>
             <br>
-            <input type="number" name="temp" id="tempretur" value="0">
-            <select name="temprut" id="temprut">
-                <option value="cel">Celsius</option>
-                <option value="fah">Fahrenheit</option>
-            </select>
+            <div class="header">
+                <p>Value</p>
+                <input type="number" name="temp" id="tempreture" value="0">
+            </div>
+            <div class="header">
+                <p>From</p>
+                <select name="temprut" class="temprut" id="tempFrom">
+                    <option value="cel">Celsius</option>
+                    <option value="fah">Fahrenheit</option>
+                    <option value="kel">Kelvin</option>
+                </select>
+            </div>
+            <div class="header">
+                <p>To</p>
+                <select name="temprut" class="temprut" id="tempTo">
+                    <option value="cel">Celsius</option>
+                    <option value="fah">Fahrenheit</option>
+                    <option value="kel">Kelvin</option>
+                </select>
+            </div>
             <br>
-            <!-- <input type="submit" name="temp" id="submit">Converter -->
-            <button type="submit" name="temp" id="submit">Converter</button>
+            <button type="submit" name="temp" id="submit1">Convert</button>
             <br>
-            <span id="res"></span>
         </form>
     </div>
-
+    <br>
+    <div id="res1"></div>
+</div>
     <script src="script.js"></script>
 </body>
 
 </html>
+
+<!-- #040106, #498cd9 hot-->
+<!-- #faf7f7, #07afe8 cold -->
+<!-- #e2d7d7, #a9e6fb Normal -->
