@@ -26,9 +26,7 @@ To get a local copy up and running, follow these steps:
 
 ## 📫 How to Reach Me : aayushpatle01@gmail.com
 
-## ⚡ Fun Fact
-
-I love Summer😒
+## ⚡ Fun Fact : I love Summer😒
 
 Thank you for visiting my Temperature Converter project repository. Enjoy exploring my work!
 
