@@ -10,9 +10,9 @@ const calculateTemp = () => {
 
 
     const cal = (valueTempFrom) => {
-        if(valueTempFrom == 'cel') return "Celcius";
-        if(valueTempFrom == 'fah') return "Fahrenheit";
-        if(valueTempFrom == 'kel') return "Kelvin";
+        if(valueTempFrom == 'cel') return " Celcius";
+        if(valueTempFrom == 'fah') return " Fahrenheit";
+        if(valueTempFrom == 'kel') return " Kelvin";
     };
 
     //Converting Celcius into fahrenheit
@@ -68,20 +68,26 @@ const calculateTemp = () => {
     else{
         document.getElementById("res1").innerHTML = inputTemp + " " + cal(valueTempFrom);
     }
-}
 
 
-//Array for pre-defined colors
-const temperatureColors = {
-    hot: "#040106, #498cd9",
-    cold: "faf7f7, #07afe8",
-    normal: "#e2d7d7, #a9e6fb"
-  };
-//Background color change for temperature ranges
-if((inputTemp <= 10 && tempSelectedFrom == 'cel') || (inputTemp <= celtofa(10) && tempSelectedFrom == 'fah') || inputTemp <= celtokel(10) && tempSelectedFrom == 'kel'){
-    // document.body.style.backgroundColor = temperatureColors[1];
-    alert('Hello');
+
+    //Array for pre-defined colors
+    const temperatureColors = {
+        hot: "#040106, #498cd9",
+        cold: "faf7f7, #07afe8",
+        normal: "#e2d7d7, #a9e6fb"
+      };
+    
+    const btnClick = document.getElementById('submit1').addEventListener('click',function(){
+          //Background color change for temperature ranges
+          if((inputTemp <= 10 && tempSelectedFrom == 'cel') || (inputTemp <= celtofa(10) && tempSelectedFrom == 'fah') || inputTemp <= celtokel(10) && tempSelectedFrom == 'kel'){
+              // document.body.style.backgroundColor = temperatureColors[1];
+              alert('Hello');
+          }
+          else {
+              document.getElementById("res1").innerHTML = "Invalid";
+          }
+    })
 }
-else {
-    document.getElementById("res1").innerHTML = "Invalid";
-}
+
+// document.getElementById('submit1').addEventListener('click', calculateTemp);

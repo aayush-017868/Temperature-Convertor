@@ -1,114 +1,132 @@
 * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  animation: gradient-animation 6s ease infinite;
 }
 
 .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    text-align: center;
-   background: linear-gradient(#434242,#ffffff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+  background: linear-gradient(-45deg, #000000, #3c97e7, #043445, #097e63);
+  background-size: 400% 400%;
+  animation: gradient-animation 15s ease infinite;
+  overflow: hidden;
 }
 
+@keyframes gradient-animation {
+    0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+  }
+
 #calc {
-    padding: 2rem 4.2rem;
-    min-height: 19rem;
-    background: linear-gradient(#171618,#0e0e0e);
-    border-radius: 10px;
+  padding: 2rem 4.2rem;
+  min-height: 19rem;
+  background: linear-gradient(#171618, #0e0e0e);
+  border-radius: 10px;
+  height: 38rem;
 }
 
 label {
-    font-size: 2rem;
-    line-height: 5rem;
-    text-transform: uppercase;
-    color: #FFEFBA;
+  font-size: 2rem;
+  line-height: 2.5rem;
+  text-transform: uppercase;
+  color: #ffefba;
+  font-weight: bold;
+  font-family: "Ubuntu", sans-serif;
 }
 
 #tempreture {
-    width: 110px;
-    height: 50px;
-    border-radius: 5px;
-    margin: 12px;
-    padding: 8px;
-    font-size: 20px;
-    font-weight: 500;
-    border: none;
-    outline: none;
+  width: 110px;
+  height: 50px;
+  border-radius: 5px;
+  margin: 12px;
+  padding: 8px;
+  font-size: 20px;
+  font-weight: 500;
+  border: none;
+  outline: none;
 }
 
 .temprut {
-    width: 120px;
-    height: 50px;
-    border-radius: 5px;
-    margin: 12px;
-    font-size: 18px;
-    font-weight: 500;
-    border: none;
-    outline: none;
-    color: black;
+  width: 120px;
+  height: 50px;
+  border-radius: 5px;
+  margin: 12px;
+  font-size: 18px;
+  font-weight: 500;
+  border: none;
+  outline: none;
+  color: black;
 }
-
 
 /*---------------------------------------------------*/
 #submit1 {
-    align-items: center;
-    background-clip: padding-box;
-    background-color: #1396d7;
-    border: 1px solid transparent;
-    border-radius: 0.25rem;
-    box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
-    box-sizing: border-box;
-    color: #fff;
-    cursor: pointer;
-    display: inline-flex;
-    font-family: system-ui, -apple-system, system-ui, "Helvetica Neue", Helvetica,
-      Arial, sans-serif;
-    font-size: 16px;
-    font-weight: 600;
-    justify-content: center;
-    line-height: 1.25;
-    margin: 0;
-    min-height: 3rem;
-    padding: calc(0.875rem - 1px) calc(1.5rem - 1px);
-    position: relative;
-    text-decoration: none;
-    transition: all 250ms;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    vertical-align: baseline;
-    width: auto;
-    box-shadow: 0.5rem 0.5rem 0.75rem rgba(0, 0, 0, 0.3);
-    z-index: 1000;
-  }
-  
-  #submit1:hover {
-    background-color: black;
-  }
- 
-
-  /*-----------------------------------------------------------------------------*/
-.header{
-    color: white;
-    font-weight: 600;
+  align-items: center;
+  background-clip: padding-box;
+  background-color: #1396d7;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: system-ui, -apple-system, system-ui, "Helvetica Neue", Helvetica,
+    Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 1.25;
+  margin: 0;
+  min-height: 3rem;
+  padding: calc(0.875rem - 1px) calc(1.5rem - 1px);
+  position: relative;
+  text-decoration: none;
+  transition: all 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  width: auto;
+  box-shadow: 0.5rem 0.5rem 0.75rem rgba(0, 0, 0, 0.3);
+  z-index: 1000;
 }
 
-.header p{
-    margin: 0;
-    padding: 0;
+#submit1:hover {
+  background-color: black;
 }
 
-#res1{
-    font-size: 30px;
-    color: rgb(255, 255, 255);
+/*-----------------------------------------------------------------------------*/
+.header {
+  color: white;
+  font-weight: 600;
 }
-#res1:hover{
-    color: orange;
-    cursor: pointer;
 
+.header p {
+  margin: 0;
+  padding: 0;
+}
+
+#res1 {
+  font-size: 30px;
+  color: rgb(255, 255, 255);
+  margin-top: 4rem;
+  font-weight: bold;
+}
+#res1:hover {
+  color: orange;
+  cursor: pointer;
 }
